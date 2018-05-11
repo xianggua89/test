@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.4.1.min.js"></script>
+	<script>
+	
+	request(url){
+		$get(url,function(data){
+			test.next(data);
+		})
+	}
+	function *ajax()
+		{
+			yield request("a.html");
+			yield request("b.html");
+			yield request("c.html");
+		}
+		
+		let test=ajax();
+		test.next();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
